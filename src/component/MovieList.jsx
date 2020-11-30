@@ -14,14 +14,10 @@ const MovieList = ()=> {
         else {
             alert(`No movie provided.`)
         }
-        // alert(`Submitting Name ${movie}`)
-        // alert(`Submitting rating ${rating}`);
-        
     }
 
     let finalMovieArr="";
     if(finalMovieList.length>0){
-        console.log('in if finalMovieList---',finalMovieList);
         finalMovieArr = [finalMovieList.map((obj,i)=>{
             return (
                 <tr key={i}>
@@ -31,13 +27,12 @@ const MovieList = ()=> {
             )
         })]
     }else{
-        console.log('in else finalMovieList---',finalMovieList);
         finalMovieArr = [<tr key="0">
             <td colSpan="2">No Records</td>
         </tr>]
     }
 
-    console.log("finalMovieArr---", finalMovieArr);
+    
 return (
 
 <div style={{textAlign:"center", padding:"10px 232px"}}>
