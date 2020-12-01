@@ -28,9 +28,8 @@ code {
  border-radius:10px;
  font-size: 16px;
  margin-bottom: 15px;
- margin-top: 52px;
- margin-left: 233px;
- 
+ margin-top: 20px;
+ margin-left: 7%;
  
 }
 
@@ -44,7 +43,20 @@ code {
   vertical-align: unset;
 }
 
-.details-box Table thead th{
-  border-top: 1px solid #e4e4e4;
-  border-bottom: 1px solid #e4e4e4;
+.table td{
+  border-top: 0px;
+}
+
+
+.main-div{
+  text-align: center; 
+  padding: 10px 232px;
+}
+
+.h1-ele{
+  text-align: center
+}
+
+.th-ele{
+  width: 160px
 }
