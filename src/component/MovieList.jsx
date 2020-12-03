@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import _ from 'lodash';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Table, Button } from 'react-bootstrap';
-const MovieList = () => {
+const MovieList = (props) => {
 	const [movie, setMovie] = useState('');
 	const [rating, setRating] = useState('');
 	const [finalMovieList, setFinalList] = useState([]);
@@ -46,7 +46,9 @@ const MovieList = () => {
 				</div>
 			) : null}
 			<form>
-				<h1 className='h1-ele'>Movie List</h1>
+				<h1 className='h1-ele' id='title'>
+					Movie List
+				</h1>
 				<div className='movieDiv'>
 					<span className='spanLayout'>
 						<label>Movie Name:</label>{' '}
