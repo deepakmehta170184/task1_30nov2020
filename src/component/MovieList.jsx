@@ -35,7 +35,7 @@ const MovieList = (props) => {
 				<div className='alert alert-danger alert-dismissible'>
 					<a
 						href='#'
-						class='close'
+						className='close'
 						data-dismiss='alert'
 						aria-label='close'
 						onClick={() => closeErrorAlert()}
@@ -79,26 +79,32 @@ const MovieList = (props) => {
 			</form>
 
 			<div className='details-box'>
-				<div className='gridlist'>
-					<Table size='sm'>
-						<thead>
-							<tr>
-								<th className='th-ele'>Movie</th>
-								<th className='th-ele'>Rating</th>
-							</tr>
-						</thead>
-						<tbody>
-							{_.map(finalMovieList, (obj, i) => {
-								return (
-									<tr key={i}>
-										<td>{obj.movie}</td>
-										<td>{obj.rating}</td>
-									</tr>
-								);
-							})}
-						</tbody>
-					</Table>
-				</div>
+				{finalMovieList.length > 0 ? (
+					<div className='gridlist'>
+						<Table size='sm'>
+							<thead>
+								<tr>
+									<th className='th-ele'>Movie</th>
+									<th className='th-ele'>Rating</th>
+								</tr>
+							</thead>
+							<tbody>
+								{_.map(finalMovieList, (obj, i) => {
+									return (
+										<tr key={i}>
+											<td>{obj.movie}</td>
+											<td>{obj.rating}</td>
+										</tr>
+									);
+								})}
+							</tbody>
+						</Table>
+					</div>
+				) : (
+					<div>
+						<span className='noMovieList'>No Movie List Added</span>
+					</div>
+				)}
 			</div>
 		</div>
 	);
