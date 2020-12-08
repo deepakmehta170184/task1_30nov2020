@@ -91,7 +91,7 @@ const MovieList = (props) => {
 							<tbody>
 								{_.map(finalMovieList, (obj, i) => {
 									return (
-										<tr key={i}>
+										<tr key={i} className='tr-wrapper'>
 											<td>{obj.movie}</td>
 											<td>{obj.rating}</td>
 										</tr>
